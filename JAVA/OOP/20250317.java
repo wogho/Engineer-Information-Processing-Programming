@@ -1,0 +1,23 @@
+// 17. 다음은 Java에 대한 코드이다. 알맞는 출력값을 작성하시오.
+// enum, name/values 인덱스 접근
+
+enum Tri {
+    A("A"), B("AB"), C("ABC");
+
+    private String code;
+
+    Tri(String code) {
+        this.code = code;
+    }
+
+    public String code() {
+        return code;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Tri t = Tri.values()[Tri.A.name().length()];
+        System.out.print(t.code());
+    }
+}
